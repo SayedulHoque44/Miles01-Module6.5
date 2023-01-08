@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      h1:hover {
+        color: #fff;
+        background-color: #000;
+      }
+      input {
+        padding: 10px;
+        display: block;
+        margin: 10px 0;
+      }
+
+      input:first-child:focus {
+        /*parent er niche first take catch krbe  */
+        background-color: aqua;
+      }
+      input:last-child {
+        /*parent er niche last take catch krbe  */
+        background-color: beige;
+      }
+
+      li:nth-child(2n + 1) {
+        /*ekhane n er value 0 theke suru hoye ay 2 er sathe gun hoye je position pabe setake catch krte thakbe  */
+        background-color: bisque;
+      }
+      li:nth-child(3) {
+        /*parent er bitore child er jekono position dorte parbo */
+        background-color: rgb(225, 128, 9);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Hover Me</h1>
+
+    <div>
+      <input type="text" placeholder="Your Name" />
+      <input type="Email" placeholder="Your Email" />
+      <input type="password" placeholder="Enter Password" />
+    </div>
+
+    <ul>
+      <li>sokin</li>
+      <li>zorina</li>
+      <li>rohina</li>
+      <li>sampa</li>
+      <li>pokira</li>
+    </ul>
+  </body>
+</html>
