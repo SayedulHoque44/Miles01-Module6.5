@@ -6,50 +6,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-      h1:hover {
-        color: #fff;
-        background-color: #000;
+      #boy {
+        position: relative;
+        top: 75px;
+        z-index: 20;
       }
-      input {
-        padding: 10px;
-        display: block;
-        margin: 10px 0;
+      #ring {
+        /* position: sticky; */
+        left: 0;
+        top: 0;
+        z-index: 1;
+        /* je parent er relative dici setar porjonto sticky thkbe but fixed dile kono parent er relative manbe na pura browser ei fixed hoye thkbe */
       }
-
-      input:first-child:focus {
-        /*parent er niche first take catch krbe  */
-        background-color: aqua;
+      #water {
+        position: relative;
+        top: -91px;
+        z-index: 2;
+        left: 44px;
       }
-      input:last-child {
-        /*parent er niche last take catch krbe  */
-        background-color: beige;
+      #water img {
+        width: 80px;
       }
-
-      li:nth-child(2n + 1) {
-        /*ekhane n er value 0 theke suru hoye ay 2 er sathe gun hoye je position pabe setake catch krte thakbe  */
-        background-color: bisque;
+      .swimming {
+        position: relative;
       }
-      li:nth-child(3) {
-        /*parent er bitore child er jekono position dorte parbo */
-        background-color: rgb(225, 128, 9);
+      .swimming div {
+        border: 2px dashed red;
+        width: 200px;
+      }
+      .dummy {
+        height: 200px;
+        background-color: rgb(16, 168, 47);
       }
     </style>
   </head>
   <body>
-    <h1>Hover Me</h1>
+    <section>
+      <h1>This is My Header</h1>
+      <h1>I am Learning Position</h1>
+      <h2>I Have Higher Position</h2>
+    </section>
 
-    <div>
-      <input type="text" placeholder="Your Name" />
-      <input type="Email" placeholder="Your Email" />
-      <input type="password" placeholder="Enter Password" />
-    </div>
+    <section class="swimming">
+      <div id="boy"><img src="./boy.svg" alt="" /></div>
+      <div id="ring"><img src="./ring.svg" alt="" /></div>
+      <div id="water"><img src="./water.svg" alt="" /></div>
 
-    <ul>
-      <li>sokin</li>
-      <li>zorina</li>
-      <li>rohina</li>
-      <li>sampa</li>
-      <li>pokira</li>
-    </ul>
+      <div class="dummy"></div>
+      <div class="dummy"></div>
+      <div class="dummy"></div>
+      <div class="dummy"></div>
+      <div class="dummy"></div>
+      <div class="dummy"></div>
+      <div class="dummy"></div>
+      <div class="dummy"></div>
+      <div class="dummy"></div>
+      <div class="dummy"></div>
+    </section>
+
+    <section>
+      <h1>This separte section</h1>
+      <div class="dummy"></div>
+      <div class="dummy"></div>
+      <div class="dummy"></div>
+      <div class="dummy"></div>
+      <div class="dummy"></div>
+      <div class="dummy"></div>
+    </section>
   </body>
 </html>
